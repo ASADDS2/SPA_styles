@@ -1,0 +1,163 @@
+/* Importar una fuente moderna de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* --- Estilos Generales del Cuerpo y Reset --- */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%); /* Degradado suave y vibrante */
+    color: #333;
+    overflow: hidden; /* Evita barras de desplazamiento si hay efectos visuales */
+}
+
+/* --- Contenedor Principal del Formulario (Login/Register) --- */
+.login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px; /* Bordes más suaves */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15); /* Sombra más profunda y difusa */
+    width: 100%;
+    max-width: 420px; /* Un poco más ancho para mejor espaciado */
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1; /* Para estar por encima de posibles fondos animados */
+    text-align: center; /* Centra el título y el enlace */
+    animation: fadeInScale 0.6s ease-out; /* Animación de entrada */
+}
+
+/* Animación de entrada para el formulario */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* --- Título del Formulario --- */
+.login-container h2 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 35px;
+    font-weight: 700; /* Más audaz */
+    letter-spacing: -0.5px;
+}
+
+/* --- Formulario y sus Elementos --- */
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Más espacio entre los elementos del formulario */
+    text-align: left; /* Alinea etiquetas y campos a la izquierda */
+}
+
+/* Estilos de las etiquetas */
+.login-container label {
+    font-weight: 600; /* Ligeramente más negrita */
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+}
+
+/* Estilos de los campos de entrada */
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 14px 15px; /* Más padding para mejor clicabilidad */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px; /* Bordes más redondeados */
+    font-size: 1em;
+    color: #333;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Suave transición al enfocar */
+}
+
+.login-container input[type="email"]:focus,
+.login-container input[type="password"]:focus {
+    border-color: #667eea; /* Un azul-púrpura al enfocar */
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2); /* Sombra de enfoque sutil */
+    outline: none; /* Elimina el contorno por defecto del navegador */
+}
+
+/* Estilos del botón de submit */
+.login-container button[type="submit"] {
+    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%); /* Degradado para el botón */
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.15em;
+    font-weight: 700; /* Más negrita */
+    margin-top: 30px; /* Más espacio superior */
+    transition: all 0.3s ease; /* Transición para todas las propiedades */
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4); /* Sombra del botón */
+    letter-spacing: 0.5px;
+}
+
+.login-container button[type="submit"]:hover {
+    transform: translateY(-3px); /* Efecto de "levantar" al pasar el ratón */
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.6); /* Sombra más pronunciada al pasar el ratón */
+    background: linear-gradient(45deg, #764ba2 0%, #667eea 100%); /* Invierte el degradado o cambia ligeramente */
+}
+
+/* --- Sección de Enlaces (Links) --- */
+.login-container .links {
+    margin-top: 30px; /* Más espacio superior */
+}
+
+.login-container .links a {
+    color: #667eea; /* Color del enlace principal */
+    text-decoration: none;
+    font-size: 0.95em;
+    font-weight: 600;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.login-container .links a:hover {
+    color: #764ba2; /* Cambia de color al pasar el ratón */
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+/* --- Ajustes Responsivos --- */
+@media (max-width: 600px) {
+    body {
+        padding: 20px; /* Padding para evitar que el formulario toque los bordes */
+    }
+
+    .login-container {
+        margin: 0 20px; /* Margen horizontal para pantallas pequeñas */
+        padding: 30px 25px; /* Menos padding en pantallas más pequeñas */
+        border-radius: 10px;
+    }
+
+    .login-container h2 {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+
+    .login-container input[type="email"],
+    .login-container input[type="password"] {
+        padding: 12px 14px;
+        font-size: 0.95em;
+    }
+
+    .login-container button[type="submit"] {
+        padding: 12px 20px;
+        font-size: 1.05em;
+        margin-top: 25px;
+    }
+
+    .login-container .links {
+        margin-top: 25px;
+    }
+}
+
